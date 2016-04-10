@@ -11,13 +11,13 @@ int  main()
            }
     for(int i=0;i<10;i++)
     {
-        for(int j=i;j<10;j++)
+        for(int j=0;j<10-i;j++)
         {
-            if(array[i]>array[j])
+            if(array[j]>array[j+1])
             {
-                int temp=array[i];
-                array[i]=array[j];
-                array[j]=temp;
+                int temp=array[j];
+                array[j]=array[j+1];
+                array[j+1]=temp;
                 }
             }
         }
