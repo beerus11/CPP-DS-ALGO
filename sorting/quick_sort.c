@@ -1,51 +1,46 @@
-#include<stdio.h>
-#include<conio.h>
-void quickSort(int[], int, int);
-int main()
+#include <stdio.h>
+#include <conio.h>
+// A utility function to swap two elements
+void swap(int* a, int* b)
 {
-    int array[10]={0,1,5,2,7,8,3,4,5,6};
-    printf("******Quick Sort******\n");
-    printf("Unsorted Array :");
-    for(int k=0;k<10;k++)
-    {
+    int t = *a;
+    *a = *b;
+    *b = t;
+}
+
+int partition(int arr[],int low,int high){
+	int pivot = arr[high];
+	int ind = low-1;
+	for(int i=low;i<=high;i++){
+		if(arr[i]<pivot){
+			ind++;
+		}
+	}
+	 swap(&arr[ind + 1], &arr[high]);
+	return (ind+1);
+}
+
+void quickSort(int arr[], int low ,int high){
+	if(low>high){
+		int pIndex = partition(arr,low high);
+		quickSort(arr,low,pIndex-1);
+		quickSort(arr,pIndex+1,high);
+	}
+}
+
+int main(){
+int array[10]={7,8,1,7,3,9,8,1,0,2};
+printf("UnSorted Array: ");
+ for (int k=0 ;k<10;k++){
         printf("%d",array[k]);
-    }
-   quickSort(array,0,9);
-    printf("\nSorted Array :");
-    for(int k=0;k<10;k++)
-    {
-        printf("%d",array[k]);
-    }
-   getch();
-   return 0; 
-    }
-    
-    void quickSort(int arr[], int left , int right)
-    {
-        int i= left;
-        int j=right;
-        int pivot = arr[(left+right)/2];
-        while(i<=j)
-        {
-            while(arr[i]<pivot)
-                 i++;
-              
-            while(arr[j]>pivot)
-                 j--;
-            
-            if(i<=j)
-            {
-                int temp=arr[i];
-                arr[i]=arr[j];
-                arr[j]=temp;
-                i++;
-                j--;  
-            }
-            
-         }
-            if(left<j)
-               quickSort(arr,left,pivot);
-             if(i<right)
-                quickSort(arr,pivot+1,right);
-       
-        }
+ }
+
+quickSort(array,0,9);
+ printf("\nSorted Array: ");
+for(int k=0;k<10;k++){
+	printf("%d",array[k]);
+}
+	getch();
+	return 0;
+}
+
