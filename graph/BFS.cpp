@@ -6,7 +6,6 @@ class Graph
 {
 	int v; //vertices
 	list<int> *adj;
-	void DFSUtil(int v, bool visited[]);
 	public :
 	Graph(int v);
 	void addEdge(int v,int w);
@@ -69,7 +68,7 @@ int main(){
     g.addEdge(2, 3);
     g.addEdge(3, 3);
  
-    cout << "Following is Depth First Traversal (starting from vertex 2) \n";
+    cout << "Following is Breadth First Traversal (starting from vertex 2) \n";
     g.BFS(2);
  
     return 0;

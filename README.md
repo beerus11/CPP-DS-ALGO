@@ -17,7 +17,7 @@ This Repository contains some awesome collection of Data-Structure & Algorithms 
 13. [Greedy Algorithms](https://github.com/thechampanurag/JAVA-DS-ALGO/tree/master/greedy)
 14. [Divide and Conquer Algorithms](https://github.com/thechampanurag/JAVA-DS-ALGO/tree/master/divide-n-conquer)
 15. [Dynamic Programming](https://github.com/thechampanurag/JAVA-DS-ALGO/tree/master/dynamic)
-
+16. [Recursion](https://github.com/thechampanurag/JAVA-DS-ALGO/tree/master/recursion)
 ## Author
 [Anurag Goel](http://www.anuraggoel.in)
 
