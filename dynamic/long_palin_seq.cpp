@@ -22,7 +22,7 @@ int lps(char *str)
 int main(){
     char seq[] = "GEEKS FOR GEEKS";
     int n = strlen(seq);
-    printf ("The lnegth of the LPS is %d", lps(seq));
+    printf ("The length of the LPS is %d", lps(seq));
     getchar();
     return 0;
 }
