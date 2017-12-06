@@ -1,4 +1,5 @@
-#include<stdio.h>
+#include <stdio.h>
+
 int fib(int n){
 	int f[n+1];
 	f[0]=0;
